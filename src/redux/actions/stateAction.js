@@ -4,3 +4,13 @@ export const createBoard = (boardName) => {
     payload: boardName,
   };
 };
+
+export const createColumn = (columnName, identifier) => {
+  return {
+    type: "CREATECOLUMN",
+    payload: {
+      columnName,
+      identifier,
+    },
+  };
+};

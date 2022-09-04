@@ -28,6 +28,7 @@ function CreateBoard({ isOpen, setIsOpen }) {
           <input
             type="text"
             id="boardName"
+            required
             value={boardName}
             onChange={({ target }) => setBoardName(target.value)}
           />

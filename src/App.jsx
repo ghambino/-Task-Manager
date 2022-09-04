@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import Sidebar from "./component/Sidebar";
 import "./App.css";
 import MainView from "./component/MainView";
+import EditTask from "./component/EditTask";
 
 function App() {
   // const [fetchedData, setFetchedData] = useState([]);
@@ -29,6 +30,7 @@ function App() {
         <Sidebar />
         <Routes>
           <Route path="/:name" element={<MainView />} />
+          <Route path="/edit/:title" element={<EditTask />} />
         </Routes>
       </div>
     </div>

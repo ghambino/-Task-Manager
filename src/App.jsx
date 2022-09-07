@@ -30,6 +30,7 @@ function App() {
         <Sidebar />
         <Routes>
           <Route path="/:name" element={<MainView />} />
+          {/* <Route path="dashboard/*" element={<MainView />} /> */}
           <Route path="/edit/:title" element={<EditTask />} />
         </Routes>
       </div>

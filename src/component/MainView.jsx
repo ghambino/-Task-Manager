@@ -14,9 +14,9 @@ function MainView() {
   const { colorMode } = useColorMode();
   const [isOpenColumn, setIsOpenColumn] = useState(false);
 
-  const displayedTask = boards.find((unit) => unit.name === name);
+  const displayedTask = boards?.find((unit) => unit.name === name);
 
-  if (displayedTask.columns.length < 1)
+  if (displayedTask?.columns?.length < 1)
     return (
       <>
         <div className="w-[100vw] h-[100vh] overflow-y-scroll">
@@ -29,7 +29,7 @@ function MainView() {
               />
               <div className="border-l-2 h-[100%] flex items-center pl-[24px]">
                 <h2 className="font-[24px] font-[700] capitalize">
-                  {displayedTask.name}
+                  {displayedTask?.name}
                 </h2>
               </div>
             </div>
@@ -80,7 +80,7 @@ function MainView() {
             />
             <div className="border-l-2 h-[100%] flex items-center pl-[24px]">
               <h2 className="font-[24px] font-[700] capitalize">
-                {displayedTask.name}
+                {displayedTask?.name}
               </h2>
             </div>
           </div>
@@ -96,7 +96,7 @@ function MainView() {
         </div>
 
         <div className="flex gap-4 p-[24px]">
-          {displayedTask.columns.map((unit, index) =>
+          {displayedTask?.columns?.map((unit, index) =>
             unit.tasks.length < 1 ? (
               ""
             ) : (
